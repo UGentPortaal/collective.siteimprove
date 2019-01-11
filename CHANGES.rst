@@ -6,6 +6,8 @@ Changelog
 
 - Fix the save and cancel buttons [batlock666]
 
+- Add compatibility with Plone 4 [batlock666]
+
 
 1.0.3 (2018-11-08)
 ------------------

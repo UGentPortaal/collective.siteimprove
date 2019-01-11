@@ -1,13 +1,22 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.siteimprove">
 
-  <!-- Publish static files -->
+  <!-- Publish static files for Plone 5 -->
   <plone:static
+      zcml:condition="have plone-5"
       name="collective.siteimprove"
       type="plone"
+      directory="static"
+      />
+
+  <!-- Publish static files for Plone 4 -->
+  <browser:resourceDirectory
+      zcml:condition="not-have plone-5"
+      name="collective.siteimprove"
       directory="static"
       />
 

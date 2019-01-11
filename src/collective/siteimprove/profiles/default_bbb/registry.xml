@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<registry>
+    <records interface="collective.siteimprove.browser.controlpanel.ISiteimproveSchema">
+        <value key="token"></value>
+    </records>
+</registry>
