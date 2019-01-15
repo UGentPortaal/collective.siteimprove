@@ -1,0 +1,10 @@
+<script src="++resource++collective.siteimprove/require.js"></script>
+<script>
+  require.config({
+    baseUrl: ".",
+    paths: {
+      "jquery": "++resource++plone.app.jquery",
+      "siteimprove": "++resource++collective.siteimprove/siteimprove"
+    }
+  });
+</script>

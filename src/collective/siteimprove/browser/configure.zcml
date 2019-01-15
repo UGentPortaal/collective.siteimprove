@@ -65,6 +65,17 @@
       permission="collective.siteimprove.UseSiteimprove"
       />
 
+  <!-- Viewlet siteimprove-require for Plone 4 -->
+  <browser:viewlet
+      zcml:condition="not-have plone-5"
+      name="siteimprove-require"
+      for="*"
+      layer="collective.siteimprove.interfaces.ICollectiveSiteimproveLayer"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+      template="siteimprove-require.pt"
+      permission="collective.siteimprove.UseSiteimprove"
+      />
+
   <subscriber
       for="*
            Products.CMFCore.interfaces.IActionSucceededEvent"
